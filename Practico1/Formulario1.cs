@@ -26,6 +26,11 @@ namespace Practico1
         {
             TConcatenado.Clear();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 
 }

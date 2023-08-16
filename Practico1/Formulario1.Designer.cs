@@ -35,6 +35,7 @@
             this.TApellido = new System.Windows.Forms.TextBox();
             this.TNombre = new System.Windows.Forms.TextBox();
             this.TConcatenado = new System.Windows.Forms.TextBox();
+            this.BSalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BGuardar
@@ -97,11 +98,22 @@
             this.TConcatenado.Size = new System.Drawing.Size(186, 157);
             this.TConcatenado.TabIndex = 6;
             // 
+            // BSalir
+            // 
+            this.BSalir.Location = new System.Drawing.Point(375, 23);
+            this.BSalir.Name = "BSalir";
+            this.BSalir.Size = new System.Drawing.Size(75, 23);
+            this.BSalir.TabIndex = 7;
+            this.BSalir.Text = "&Salir";
+            this.BSalir.UseVisualStyleBackColor = true;
+            this.BSalir.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Formulario1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 261);
+            this.Controls.Add(this.BSalir);
             this.Controls.Add(this.TConcatenado);
             this.Controls.Add(this.TNombre);
             this.Controls.Add(this.TApellido);
@@ -125,6 +137,7 @@
         private System.Windows.Forms.TextBox TApellido;
         private System.Windows.Forms.TextBox TNombre;
         private System.Windows.Forms.TextBox TConcatenado;
+        private System.Windows.Forms.Button BSalir;
     }
 }
 
