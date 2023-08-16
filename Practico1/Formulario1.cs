@@ -19,7 +19,13 @@ namespace Practico1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            TConcatenado.Text = TApellido.Text + " " + TNombre.Text;
+        }
 
+        private void BEliminar_Click(object sender, EventArgs e)
+        {
+            TConcatenado.Clear();
         }
     }
+
 }

@@ -55,6 +55,7 @@
             this.BEliminar.TabIndex = 1;
             this.BEliminar.Text = "Eliminar";
             this.BEliminar.UseVisualStyleBackColor = true;
+            this.BEliminar.Click += new System.EventHandler(this.BEliminar_Click);
             // 
             // LApellido
             // 
