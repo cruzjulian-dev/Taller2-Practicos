@@ -49,16 +49,21 @@ namespace Practico2
 
         private void BGuardar_Click(object sender, EventArgs e)
         {
-            if (LNombre.Text.Trim() == " " || LApellido.Text.Trim() == " ")
+
+            //if (string.IsNullOrEmpty(TNombre.Text.Trim()) || string.IsNullOrEmpty(TApellido.Text.Trim()) )
+            if (TDni.Text.Trim() == "" || TNombre.Text.Trim() == "" || TApellido.Text.Trim() == "")
             {
                 MessageBox.Show("Debe completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 LModificar.Text = TNombre.Text.Trim() + " " + TApellido.Text.Trim();
-                MessageBox.Show("Debe completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DialogResult ask = MessageBox.Show("Seguro que desea insertar un nuevo Cliente?", "Confirmar inserción", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (ask == DialogResult.Yes)
+                {
+                    MessageBox.Show("El Cliente: " + TNombre.Text.Trim() + " " + TApellido.Text.Trim() + " se insertó correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            
         }
     }
 }

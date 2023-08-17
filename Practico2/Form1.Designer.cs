@@ -146,6 +146,7 @@
             this.Controls.Add(this.LNombre);
             this.Controls.Add(this.LNya);
             this.Name = "Formulario1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pequeño Formulario";
             this.Load += new System.EventHandler(this.Formulario1_Load);
             this.ResumeLayout(false);
