@@ -84,6 +84,7 @@
             this.BGuardar.TabIndex = 4;
             this.BGuardar.Text = "Guardar";
             this.BGuardar.UseVisualStyleBackColor = true;
+            this.BGuardar.Click += new System.EventHandler(this.BGuardar_Click);
             // 
             // BEliminar
             // 

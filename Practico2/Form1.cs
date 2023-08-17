@@ -46,5 +46,19 @@ namespace Practico2
                 e.Handled = true;
             }
         }
+
+        private void BGuardar_Click(object sender, EventArgs e)
+        {
+            if (LNombre.Text.Trim() == " " || LApellido.Text.Trim() == " ")
+            {
+                MessageBox.Show("Debe completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                LModificar.Text = TNombre.Text.Trim() + " " + TApellido.Text.Trim();
+                MessageBox.Show("Debe completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+        }
     }
 }

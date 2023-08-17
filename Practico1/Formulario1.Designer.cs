@@ -122,6 +122,7 @@
             this.Controls.Add(this.BEliminar);
             this.Controls.Add(this.BGuardar);
             this.Name = "Formulario1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mi Primer Forms";
             this.ResumeLayout(false);
             this.PerformLayout();
