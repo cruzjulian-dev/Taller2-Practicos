@@ -75,7 +75,7 @@ namespace Practico2
             else
             {
                 DialogResult ask;
-                ask = MessageBox.Show("Está apunto de eliminar el Cliente: " + TNombre.Text.Trim() + " " + TApellido.Text.Trim(), "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                ask = MessageBox.Show("Está apunto de eliminar el Cliente: " + TNombre.Text.Trim() + " " + TApellido.Text.Trim(), "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
                 if (ask == DialogResult.Yes)
                 {
                     MessageBox.Show("El Cliente: " + TNombre.Text.Trim() + " " + TApellido.Text.Trim() + " se elimino correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
