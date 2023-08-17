@@ -45,9 +45,9 @@
             this.LNya.AutoSize = true;
             this.LNya.Location = new System.Drawing.Point(37, 38);
             this.LNya.Name = "LNya";
-            this.LNya.Size = new System.Drawing.Size(92, 13);
+            this.LNya.Size = new System.Drawing.Size(95, 13);
             this.LNya.TabIndex = 0;
-            this.LNya.Text = "Nombre y Apellido";
+            this.LNya.Text = "Nombre y Apellido:";
             // 
             // LNombre
             // 
@@ -78,7 +78,7 @@
             // 
             // BGuardar
             // 
-            this.BGuardar.Location = new System.Drawing.Point(40, 296);
+            this.BGuardar.Location = new System.Drawing.Point(57, 296);
             this.BGuardar.Name = "BGuardar";
             this.BGuardar.Size = new System.Drawing.Size(75, 23);
             this.BGuardar.TabIndex = 4;
@@ -87,7 +87,7 @@
             // 
             // BEliminar
             // 
-            this.BEliminar.Location = new System.Drawing.Point(141, 296);
+            this.BEliminar.Location = new System.Drawing.Point(152, 296);
             this.BEliminar.Name = "BEliminar";
             this.BEliminar.Size = new System.Drawing.Size(75, 23);
             this.BEliminar.TabIndex = 5;
@@ -98,29 +98,32 @@
             // 
             this.TDni.Location = new System.Drawing.Point(103, 101);
             this.TDni.Name = "TDni";
-            this.TDni.Size = new System.Drawing.Size(100, 20);
+            this.TDni.Size = new System.Drawing.Size(124, 20);
             this.TDni.TabIndex = 6;
+            this.TDni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TDni_KeyPress);
             // 
             // TApellido
             // 
             this.TApellido.Location = new System.Drawing.Point(103, 165);
             this.TApellido.Name = "TApellido";
-            this.TApellido.Size = new System.Drawing.Size(100, 20);
+            this.TApellido.Size = new System.Drawing.Size(124, 20);
             this.TApellido.TabIndex = 7;
+            this.TApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TApellido_KeyPress);
             // 
             // TNombre
             // 
             this.TNombre.Location = new System.Drawing.Point(103, 229);
             this.TNombre.Name = "TNombre";
-            this.TNombre.Size = new System.Drawing.Size(100, 20);
+            this.TNombre.Size = new System.Drawing.Size(124, 20);
             this.TNombre.TabIndex = 8;
+            this.TNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TNombre_KeyPress);
             // 
             // LModificar
             // 
             this.LModificar.AutoSize = true;
             this.LModificar.BackColor = System.Drawing.SystemColors.Control;
             this.LModificar.ForeColor = System.Drawing.Color.Crimson;
-            this.LModificar.Location = new System.Drawing.Point(157, 38);
+            this.LModificar.Location = new System.Drawing.Point(153, 38);
             this.LModificar.Name = "LModificar";
             this.LModificar.Size = new System.Drawing.Size(50, 13);
             this.LModificar.TabIndex = 9;
