@@ -65,5 +65,27 @@ namespace Practico2
                 }
             }
         }
+
+        private void BEliminar_Click(object sender, EventArgs e)
+        {
+            if (TDni.Text.Trim() == "" || TNombre.Text.Trim() == "" || TApellido.Text.Trim() == "")
+            {
+                MessageBox.Show("No existe cliente para eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                DialogResult ask;
+                ask = MessageBox.Show("Está apunto de eliminar el Cliente: " + TNombre.Text.Trim() + " " + TApellido.Text.Trim(), "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                if (ask == DialogResult.Yes)
+                {
+                    MessageBox.Show("El Cliente: " + TNombre.Text.Trim() + " " + TApellido.Text.Trim() + " se elimino correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    TDni.Clear();
+                    TNombre.Clear();
+                    TApellido.Clear();
+                    LModificar.Text = "Modificar";
+                }
+            }
+            
+        }
     }
 }
