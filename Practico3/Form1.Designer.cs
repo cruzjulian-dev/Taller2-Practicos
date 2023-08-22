@@ -219,6 +219,7 @@
             this.TTelefono.Name = "TTelefono";
             this.TTelefono.Size = new System.Drawing.Size(124, 20);
             this.TTelefono.TabIndex = 11;
+            this.TTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TTelefono_KeyPress);
             // 
             // LTelefono
             // 
@@ -239,6 +240,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // LNuevoCliente
             // 
@@ -262,6 +264,7 @@
             this.RBVaron.TabStop = true;
             this.RBVaron.Text = "Varon";
             this.RBVaron.UseVisualStyleBackColor = true;
+            this.RBVaron.CheckedChanged += new System.EventHandler(this.RBVaron_CheckedChanged);
             // 
             // RBMujer
             // 
@@ -273,6 +276,7 @@
             this.RBMujer.TabStop = true;
             this.RBMujer.Text = "Mujer";
             this.RBMujer.UseVisualStyleBackColor = true;
+            this.RBMujer.CheckedChanged += new System.EventHandler(this.RBMujer_CheckedChanged);
             // 
             // BSalir
             // 

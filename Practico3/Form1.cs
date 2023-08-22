@@ -51,7 +51,7 @@ namespace Practico2
         {
 
             //if (string.IsNullOrEmpty(TNombre.Text.Trim()) || string.IsNullOrEmpty(TApellido.Text.Trim()) )
-            if (TDni.Text.Trim() == "" || TNombre.Text.Trim() == "" || TApellido.Text.Trim() == "")
+            if (TDni.Text.Trim() == "" || TNombre.Text.Trim() == "" || TApellido.Text.Trim() == "" || TTelefono.Text.Trim() == "")
             {
                 MessageBox.Show("Debe completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -68,7 +68,7 @@ namespace Practico2
 
         private void BEliminar_Click(object sender, EventArgs e)
         {
-            if (TDni.Text.Trim() == "" || TNombre.Text.Trim() == "" || TApellido.Text.Trim() == "")
+            if (TDni.Text.Trim() == "" || TNombre.Text.Trim() == "" || TApellido.Text.Trim() == "" || TTelefono.Text.Trim() == "")
             {
                 MessageBox.Show("No existe cliente para eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -82,6 +82,10 @@ namespace Practico2
                     TDni.Clear();
                     TNombre.Clear();
                     TApellido.Clear();
+                    TTelefono.Clear();
+                    CNaranja.Checked = false;
+                    CVisa.Checked = false;
+                    CMastercard.Checked = false;
                     LModificar.Text = "Modificar";
                 }
             }
@@ -91,6 +95,30 @@ namespace Practico2
         private void BSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
+            //me.close();
+        }
+
+        private void RBVaron_CheckedChanged(object sender, EventArgs e)
+        {
+            //pictureBox1.BackgroundImage = Formulario_MDI.My.Resources.man;
+        }
+
+        private void RBMujer_CheckedChanged(object sender, EventArgs e)
+        {
+            //pictureBox1.BackgroundImage = Formulario_MDI.My.Resources.woman;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
