@@ -87,5 +87,10 @@ namespace Practico2
             }
             
         }
+
+        private void BSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
