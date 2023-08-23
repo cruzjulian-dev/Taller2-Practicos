@@ -96,7 +96,8 @@ namespace Practico2
         private void BSalir_Click(object sender, EventArgs e)
         {
             //Application.Exit();
-            MDIParent1.ActiveForm.Close();
+            //MDIParent1.ActiveForm.Close();
+            this.Close();
         }
 
         private void RBVaron_CheckedChanged(object sender, EventArgs e)
