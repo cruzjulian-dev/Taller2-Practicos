@@ -21,10 +21,17 @@ namespace Practico2
 
         private void ShowNewForm(object sender, EventArgs e)
         {
-            Form childForm = new Form();
-            childForm.MdiParent = this;
-            childForm.Text = "Ventana " + childFormNumber++;
-            childForm.Show();
+            
+            if (MdiChildren.Count() == 0)
+            {
+                Formulario1 childForm = new Formulario1();
+                childForm.MdiParent = this;
+                childForm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Ya existe un formulario con ese nombre", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void OpenFile(object sender, EventArgs e)

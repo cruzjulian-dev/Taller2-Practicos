@@ -16,7 +16,7 @@ namespace Practico2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MDIParent1());
+            Application.Run(new MDIParent1()); // new Form1()
         }
     }
 }

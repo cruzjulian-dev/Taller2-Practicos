@@ -92,6 +92,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -118,6 +119,23 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="img\man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\quit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\woman.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

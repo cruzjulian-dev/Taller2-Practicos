@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Practico2.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -94,18 +95,18 @@ namespace Practico2
 
         private void BSalir_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-            //me.close();
+            //Application.Exit();
+            MDIParent1.ActiveForm.Close();
         }
 
         private void RBVaron_CheckedChanged(object sender, EventArgs e)
         {
-            //pictureBox1.BackgroundImage = Formulario_MDI.My.Resources.man;
+            pictureBox1.Image = Resources.man;
         }
 
         private void RBMujer_CheckedChanged(object sender, EventArgs e)
         {
-            //pictureBox1.BackgroundImage = Formulario_MDI.My.Resources.woman;
+            pictureBox1.Image = Resources.woman;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
