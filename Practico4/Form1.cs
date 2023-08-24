@@ -43,9 +43,15 @@ namespace Practico4
                 {
                     if (!char.IsNumber(TDesde.Text[i]))
                     {
-                        error = 's';
-                        MessageBox.Show("Hay al menos un caracter no numérico", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        break;
+                        if (error == 's')
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Hay al menos un caracter no numérico", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            break;
+                        }
                     }
                 }
 
@@ -53,12 +59,20 @@ namespace Practico4
                 {
                     int desde = int.Parse(TDesde.Text);
                     int hasta = int.Parse(THasta.Text);
-                    
-                     while (desde <= hasta)
-                    { 
-                        LBLista.Items.Add(desde);
-                        desde++;
+
+                    if (desde <= hasta)
+                    {
+                        while (desde <= hasta)
+                        {
+                            LBLista.Items.Add(desde);
+                            desde++;
+                        }
                     }
+                    else
+                    {
+                        MessageBox.Show("El campo 'Desde' debe ser menor que el campo 'Hasta'", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
                 }
 
             }
@@ -67,6 +81,22 @@ namespace Practico4
                 MessageBox.Show("Debes completar los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+
+        private void TDesde_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void THasta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

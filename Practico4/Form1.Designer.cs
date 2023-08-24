@@ -62,6 +62,7 @@
             this.TDesde.Name = "TDesde";
             this.TDesde.Size = new System.Drawing.Size(100, 20);
             this.TDesde.TabIndex = 2;
+            this.TDesde.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TDesde_KeyPress);
             // 
             // THasta
             // 
@@ -69,6 +70,7 @@
             this.THasta.Name = "THasta";
             this.THasta.Size = new System.Drawing.Size(100, 20);
             this.THasta.TabIndex = 3;
+            this.THasta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.THasta_KeyPress);
             // 
             // BGenerar
             // 
