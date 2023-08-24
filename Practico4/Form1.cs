@@ -24,7 +24,7 @@ namespace Practico4
 
         private void BGenerar_Click(object sender, EventArgs e)
         {
-            LBLista.Text = "";
+            LBLista.Items.Clear();
             if (TDesde.Text.Trim() != "" && THasta.Text.Trim() != "" )
             {
                 int i;
