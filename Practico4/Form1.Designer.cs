@@ -35,9 +35,9 @@
             this.BGenerar = new System.Windows.Forms.Button();
             this.LLista = new System.Windows.Forms.Label();
             this.LBLista = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.BNumPares = new System.Windows.Forms.Button();
+            this.BNumImpares = new System.Windows.Forms.Button();
+            this.BNumPrimos = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LDesde
@@ -102,41 +102,43 @@
             this.LBLista.Size = new System.Drawing.Size(358, 316);
             this.LBLista.TabIndex = 6;
             // 
-            // button1
+            // BNumPares
             // 
-            this.button1.Location = new System.Drawing.Point(89, 284);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Numeros Pares";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BNumPares.Location = new System.Drawing.Point(89, 284);
+            this.BNumPares.Name = "BNumPares";
+            this.BNumPares.Size = new System.Drawing.Size(118, 23);
+            this.BNumPares.TabIndex = 7;
+            this.BNumPares.Text = "Numeros Pares";
+            this.BNumPares.UseVisualStyleBackColor = true;
+            this.BNumPares.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // BNumImpares
             // 
-            this.button2.Location = new System.Drawing.Point(89, 326);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(118, 23);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Numeros Impares";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BNumImpares.Location = new System.Drawing.Point(89, 326);
+            this.BNumImpares.Name = "BNumImpares";
+            this.BNumImpares.Size = new System.Drawing.Size(118, 23);
+            this.BNumImpares.TabIndex = 8;
+            this.BNumImpares.Text = "Numeros Impares";
+            this.BNumImpares.UseVisualStyleBackColor = true;
+            this.BNumImpares.Click += new System.EventHandler(this.BNumImpares_Click);
             // 
-            // button3
+            // BNumPrimos
             // 
-            this.button3.Location = new System.Drawing.Point(89, 368);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(118, 23);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Numeros Primos";
-            this.button3.UseVisualStyleBackColor = true;
+            this.BNumPrimos.Location = new System.Drawing.Point(89, 367);
+            this.BNumPrimos.Name = "BNumPrimos";
+            this.BNumPrimos.Size = new System.Drawing.Size(118, 23);
+            this.BNumPrimos.TabIndex = 9;
+            this.BNumPrimos.Text = "Numeros Primos";
+            this.BNumPrimos.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(655, 450);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BNumPrimos);
+            this.Controls.Add(this.BNumImpares);
+            this.Controls.Add(this.BNumPares);
             this.Controls.Add(this.LBLista);
             this.Controls.Add(this.LLista);
             this.Controls.Add(this.BGenerar);
@@ -160,9 +162,9 @@
         private System.Windows.Forms.Button BGenerar;
         private System.Windows.Forms.Label LLista;
         private System.Windows.Forms.ListBox LBLista;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button BNumPares;
+        private System.Windows.Forms.Button BNumImpares;
+        private System.Windows.Forms.Button BNumPrimos;
     }
 }
 
