@@ -66,6 +66,7 @@
             this.TDesde.Size = new System.Drawing.Size(100, 20);
             this.TDesde.TabIndex = 2;
             this.TDesde.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TDesde_KeyPress);
+            this.TDesde.Validating += new System.ComponentModel.CancelEventHandler(this.TDesde_Validating);
             // 
             // THasta
             // 
@@ -148,6 +149,7 @@
             this.Controls.Add(this.LHasta);
             this.Controls.Add(this.LDesde);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
