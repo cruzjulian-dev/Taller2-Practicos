@@ -130,6 +130,7 @@
             this.BNumPrimos.TabIndex = 9;
             this.BNumPrimos.Text = "Numeros Primos";
             this.BNumPrimos.UseVisualStyleBackColor = true;
+            this.BNumPrimos.Click += new System.EventHandler(this.BNumPrimos_Click);
             // 
             // Form1
             // 

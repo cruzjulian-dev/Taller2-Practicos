@@ -226,5 +226,10 @@ namespace Practico4
                 MessageBox.Show("Debes completar los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void BNumPrimos_Click(object sender, EventArgs e)
+        {
+            //Un número primo es un número entero con exactamente dos divisores integrales, 1 y el número mismo
+        }
     }
 }
