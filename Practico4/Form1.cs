@@ -314,5 +314,10 @@ namespace Practico4
         {
 
         }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

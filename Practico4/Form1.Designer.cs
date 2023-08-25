@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.LDesde = new System.Windows.Forms.Label();
             this.LHasta = new System.Windows.Forms.Label();
             this.TDesde = new System.Windows.Forms.TextBox();
@@ -38,12 +41,14 @@
             this.BNumPares = new System.Windows.Forms.Button();
             this.BNumImpares = new System.Windows.Forms.Button();
             this.BNumPrimos = new System.Windows.Forms.Button();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // LDesde
             // 
             this.LDesde.AutoSize = true;
-            this.LDesde.Location = new System.Drawing.Point(45, 101);
+            this.LDesde.Location = new System.Drawing.Point(21, 88);
             this.LDesde.Name = "LDesde";
             this.LDesde.Size = new System.Drawing.Size(38, 13);
             this.LDesde.TabIndex = 0;
@@ -53,7 +58,7 @@
             // LHasta
             // 
             this.LHasta.AutoSize = true;
-            this.LHasta.Location = new System.Drawing.Point(48, 171);
+            this.LHasta.Location = new System.Drawing.Point(24, 158);
             this.LHasta.Name = "LHasta";
             this.LHasta.Size = new System.Drawing.Size(35, 13);
             this.LHasta.TabIndex = 1;
@@ -61,7 +66,7 @@
             // 
             // TDesde
             // 
-            this.TDesde.Location = new System.Drawing.Point(107, 98);
+            this.TDesde.Location = new System.Drawing.Point(83, 85);
             this.TDesde.Name = "TDesde";
             this.TDesde.Size = new System.Drawing.Size(100, 20);
             this.TDesde.TabIndex = 2;
@@ -70,7 +75,7 @@
             // 
             // THasta
             // 
-            this.THasta.Location = new System.Drawing.Point(107, 168);
+            this.THasta.Location = new System.Drawing.Point(83, 155);
             this.THasta.Name = "THasta";
             this.THasta.Size = new System.Drawing.Size(100, 20);
             this.THasta.TabIndex = 3;
@@ -78,7 +83,7 @@
             // 
             // BGenerar
             // 
-            this.BGenerar.Location = new System.Drawing.Point(89, 218);
+            this.BGenerar.Location = new System.Drawing.Point(65, 205);
             this.BGenerar.Name = "BGenerar";
             this.BGenerar.Size = new System.Drawing.Size(118, 23);
             this.BGenerar.TabIndex = 4;
@@ -89,7 +94,7 @@
             // LLista
             // 
             this.LLista.AutoSize = true;
-            this.LLista.Location = new System.Drawing.Point(406, 72);
+            this.LLista.Location = new System.Drawing.Point(382, 59);
             this.LLista.Name = "LLista";
             this.LLista.Size = new System.Drawing.Size(89, 13);
             this.LLista.TabIndex = 5;
@@ -98,14 +103,14 @@
             // LBLista
             // 
             this.LBLista.FormattingEnabled = true;
-            this.LBLista.Location = new System.Drawing.Point(273, 98);
+            this.LBLista.Location = new System.Drawing.Point(249, 85);
             this.LBLista.Name = "LBLista";
             this.LBLista.Size = new System.Drawing.Size(358, 316);
             this.LBLista.TabIndex = 6;
             // 
             // BNumPares
             // 
-            this.BNumPares.Location = new System.Drawing.Point(89, 284);
+            this.BNumPares.Location = new System.Drawing.Point(65, 271);
             this.BNumPares.Name = "BNumPares";
             this.BNumPares.Size = new System.Drawing.Size(118, 23);
             this.BNumPares.TabIndex = 7;
@@ -115,7 +120,7 @@
             // 
             // BNumImpares
             // 
-            this.BNumImpares.Location = new System.Drawing.Point(89, 326);
+            this.BNumImpares.Location = new System.Drawing.Point(65, 313);
             this.BNumImpares.Name = "BNumImpares";
             this.BNumImpares.Size = new System.Drawing.Size(118, 23);
             this.BNumImpares.TabIndex = 8;
@@ -125,7 +130,7 @@
             // 
             // BNumPrimos
             // 
-            this.BNumPrimos.Location = new System.Drawing.Point(89, 367);
+            this.BNumPrimos.Location = new System.Drawing.Point(65, 354);
             this.BNumPrimos.Name = "BNumPrimos";
             this.BNumPrimos.Size = new System.Drawing.Size(118, 23);
             this.BNumPrimos.TabIndex = 9;
@@ -133,11 +138,29 @@
             this.BNumPrimos.UseVisualStyleBackColor = true;
             this.BNumPrimos.Click += new System.EventHandler(this.BNumPrimos_Click);
             // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(633, 85);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(290, 300);
+            this.chart1.TabIndex = 10;
+            this.chart1.Text = "chart1";
+            this.chart1.Click += new System.EventHandler(this.chart1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(655, 450);
+            this.ClientSize = new System.Drawing.Size(950, 450);
+            this.Controls.Add(this.chart1);
             this.Controls.Add(this.BNumPrimos);
             this.Controls.Add(this.BNumImpares);
             this.Controls.Add(this.BNumPares);
@@ -151,6 +174,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,6 +192,7 @@
         private System.Windows.Forms.Button BNumPares;
         private System.Windows.Forms.Button BNumImpares;
         private System.Windows.Forms.Button BNumPrimos;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }
 
