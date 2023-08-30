@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.PBFoto = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TRuta = new System.Windows.Forms.TextBox();
             this.RBMujer = new System.Windows.Forms.RadioButton();
             this.RBHombre = new System.Windows.Forms.RadioButton();
             this.DTFecha = new System.Windows.Forms.DateTimePicker();
@@ -45,6 +46,15 @@
             this.LFecha = new System.Windows.Forms.Label();
             this.LNombre = new System.Windows.Forms.Label();
             this.BAgregar = new System.Windows.Forms.Button();
+            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha_Nacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Saldo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Foto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ruta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBFoto)).BeginInit();
             this.panel1.SuspendLayout();
@@ -53,6 +63,15 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Apellido,
+            this.Nombre,
+            this.Fecha_Nacimiento,
+            this.Sexo,
+            this.Eliminar,
+            this.Saldo,
+            this.Foto,
+            this.Ruta});
             this.dataGridView1.Location = new System.Drawing.Point(12, 400);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(868, 170);
@@ -60,17 +79,20 @@
             // 
             // PBFoto
             // 
+            this.PBFoto.Image = ((System.Drawing.Image)(resources.GetObject("PBFoto.Image")));
             this.PBFoto.Location = new System.Drawing.Point(588, 33);
             this.PBFoto.Name = "PBFoto";
             this.PBFoto.Size = new System.Drawing.Size(263, 254);
+            this.PBFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PBFoto.TabIndex = 2;
             this.PBFoto.TabStop = false;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.TRuta);
             this.panel1.Controls.Add(this.RBMujer);
             this.panel1.Controls.Add(this.RBHombre);
             this.panel1.Controls.Add(this.DTFecha);
@@ -86,15 +108,15 @@
             this.panel1.Controls.Add(this.BAgregar);
             this.panel1.Location = new System.Drawing.Point(128, 33);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(428, 340);
+            this.panel1.Size = new System.Drawing.Size(428, 361);
             this.panel1.TabIndex = 0;
             // 
-            // textBox1
+            // TRuta
             // 
-            this.textBox1.Location = new System.Drawing.Point(147, 251);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(226, 20);
-            this.textBox1.TabIndex = 13;
+            this.TRuta.Location = new System.Drawing.Point(147, 251);
+            this.TRuta.Name = "TRuta";
+            this.TRuta.Size = new System.Drawing.Size(226, 20);
+            this.TRuta.TabIndex = 13;
             // 
             // RBMujer
             // 
@@ -163,6 +185,7 @@
             this.BFoto.TabIndex = 6;
             this.BFoto.Text = "Foto";
             this.BFoto.UseVisualStyleBackColor = true;
+            this.BFoto.Click += new System.EventHandler(this.BFoto_Click);
             // 
             // LSaldo
             // 
@@ -227,19 +250,67 @@
             // 
             // BAgregar
             // 
+            this.BAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BAgregar.Image = ((System.Drawing.Image)(resources.GetObject("BAgregar.Image")));
             this.BAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BAgregar.Location = new System.Drawing.Point(161, 287);
+            this.BAgregar.Location = new System.Drawing.Point(166, 293);
             this.BAgregar.Name = "BAgregar";
-            this.BAgregar.Size = new System.Drawing.Size(105, 40);
+            this.BAgregar.Size = new System.Drawing.Size(105, 53);
             this.BAgregar.TabIndex = 0;
             this.BAgregar.Text = "Agregar";
             this.BAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BAgregar.UseVisualStyleBackColor = true;
             // 
+            // Apellido
+            // 
+            this.Apellido.HeaderText = "Apellido";
+            this.Apellido.Name = "Apellido";
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            // 
+            // Fecha_Nacimiento
+            // 
+            this.Fecha_Nacimiento.HeaderText = "Fecha Nacimiento";
+            this.Fecha_Nacimiento.Name = "Fecha_Nacimiento";
+            // 
+            // Sexo
+            // 
+            this.Sexo.HeaderText = "Sexo";
+            this.Sexo.Name = "Sexo";
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Name = "Eliminar";
+            // 
+            // Saldo
+            // 
+            this.Saldo.HeaderText = "Saldo";
+            this.Saldo.Name = "Saldo";
+            // 
+            // Foto
+            // 
+            this.Foto.HeaderText = "Foto";
+            this.Foto.Name = "Foto";
+            // 
+            // Ruta
+            // 
+            this.Ruta.HeaderText = "Ruta";
+            this.Ruta.Name = "Ruta";
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(892, 582);
             this.Controls.Add(this.PBFoto);
             this.Controls.Add(this.dataGridView1);
@@ -271,9 +342,18 @@
         private System.Windows.Forms.DateTimePicker DTFecha;
         private System.Windows.Forms.RadioButton RBHombre;
         private System.Windows.Forms.RadioButton RBMujer;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TRuta;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox PBFoto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_Nacimiento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sexo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Eliminar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Saldo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Foto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ruta;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 
