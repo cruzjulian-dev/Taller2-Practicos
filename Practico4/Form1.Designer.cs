@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.LDesde = new System.Windows.Forms.Label();
             this.LHasta = new System.Windows.Forms.Label();
             this.TDesde = new System.Windows.Forms.TextBox();
@@ -41,8 +41,8 @@
             this.BNumPares = new System.Windows.Forms.Button();
             this.BNumImpares = new System.Windows.Forms.Button();
             this.BNumPrimos = new System.Windows.Forms.Button();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.CTorta = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            ((System.ComponentModel.ISupportInitialize)(this.CTorta)).BeginInit();
             this.SuspendLayout();
             // 
             // LDesde
@@ -95,7 +95,7 @@
             // 
             this.LLista.AutoSize = true;
             this.LLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LLista.Location = new System.Drawing.Point(332, 25);
+            this.LLista.Location = new System.Drawing.Point(460, 23);
             this.LLista.Name = "LLista";
             this.LLista.Size = new System.Drawing.Size(202, 29);
             this.LLista.TabIndex = 5;
@@ -139,29 +139,29 @@
             this.BNumPrimos.UseVisualStyleBackColor = true;
             this.BNumPrimos.Click += new System.EventHandler(this.BNumPrimos_Click);
             // 
-            // chart1
+            // CTorta
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
-            this.chart1.Location = new System.Drawing.Point(633, 85);
-            this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(290, 300);
-            this.chart1.TabIndex = 10;
-            this.chart1.Text = "chart1";
-            this.chart1.Click += new System.EventHandler(this.chart1_Click);
+            chartArea4.Name = "ChartArea1";
+            this.CTorta.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.CTorta.Legends.Add(legend4);
+            this.CTorta.Location = new System.Drawing.Point(633, 85);
+            this.CTorta.Name = "CTorta";
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.CTorta.Series.Add(series4);
+            this.CTorta.Size = new System.Drawing.Size(468, 300);
+            this.CTorta.TabIndex = 10;
+            this.CTorta.Text = "chart1";
+            this.CTorta.Click += new System.EventHandler(this.chart1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(950, 450);
-            this.Controls.Add(this.chart1);
+            this.ClientSize = new System.Drawing.Size(1136, 450);
+            this.Controls.Add(this.CTorta);
             this.Controls.Add(this.BNumPrimos);
             this.Controls.Add(this.BNumImpares);
             this.Controls.Add(this.BNumPares);
@@ -174,8 +174,8 @@
             this.Controls.Add(this.LDesde);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            this.Text = "Practico 4 - Cruz";
+            ((System.ComponentModel.ISupportInitialize)(this.CTorta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,7 +193,7 @@
         private System.Windows.Forms.Button BNumPares;
         private System.Windows.Forms.Button BNumImpares;
         private System.Windows.Forms.Button BNumPrimos;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart CTorta;
     }
 }
 

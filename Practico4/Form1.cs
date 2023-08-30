@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Practico4
 {
@@ -62,10 +63,24 @@ namespace Practico4
 
                     if (desde <= hasta)
                     {
+                        CTorta.Series.Clear();
+                        CTorta.Titles.Clear();
+                        CTorta.Titles.Add("Conteo de números");
+                        List<int> series = new List<int>(); // cantidad de elementos
+                        List<int> puntos = new List<int>(); // cantidad de puntos por cada elemento
                         while (desde <= hasta)
                         {
                             LBLista.Items.Add(desde);
+                            series.Add(desde);
+                            puntos.Add(desde);
                             desde++;
+                        }
+                        for (int j = 0; j < series.Count; j++)
+                        {
+                            Series s = CTorta.Series.Add(series[j].ToString());
+                            //s.Label = puntos[j].ToString();
+                            //s.Points.AddXY(puntos[j], puntos[j]); Agrega eje horizontal y vertical
+                            s.Points.Add(puntos[j]); //Agrega solo eje vertical
                         }
                     }
                     else
@@ -102,6 +117,8 @@ namespace Practico4
         private void button1_Click(object sender, EventArgs e)
         {
             LBLista.Items.Clear();
+            
+
             if (TDesde.Text.Trim() != "" && THasta.Text.Trim() != "")
             {
                 int i;
@@ -139,15 +156,35 @@ namespace Practico4
 
                     if (desde <= hasta)
                     {
+                        CTorta.Series.Clear();
+                        CTorta.Titles.Clear();
+                        CTorta.Titles.Add("Numeros Pares");
+                        List<int> series = new List<int>(); // cantidad de elementos
+                        List<int> puntos = new List<int>(); // cantidad de puntos por cada elemento
+
                         while (desde <= hasta)
                         {
                             if (desde % 2 == 0)
                             {
+                 
                                 LBLista.Items.Add(desde);
+
+                                series.Add(desde);
+                                puntos.Add(desde);
+                                
                             }
                             
                             desde++;
                         }
+
+                        for (int j=0; j < series.Count; j++)
+                        {
+                            Series s = CTorta.Series.Add(series[j].ToString());
+                            //s.Label = puntos[j].ToString();
+                            //s.Points.AddXY(puntos[j], puntos[j]); Agrega eje horizontal y vertical
+                            s.Points.Add(puntos[j]); //Agrega solo eje vertical
+                        }
+
                     }
                     else
                     {
@@ -203,14 +240,28 @@ namespace Practico4
 
                     if (desde <= hasta)
                     {
+                        CTorta.Series.Clear();
+                        CTorta.Titles.Clear();
+                        CTorta.Titles.Add("Numeros Impares");
+                        List<int> series = new List<int>(); // cantidad de elementos
+                        List<int> puntos = new List<int>(); // cantidad de puntos por cada elemento
                         while (desde <= hasta)
                         {
                             if (desde % 2 != 0)
                             {
                                 LBLista.Items.Add(desde);
+                                series.Add(desde);
+                                puntos.Add(desde);
                             }
 
                             desde++;
+                        }
+                        for (int j = 0; j < series.Count; j++)
+                        {
+                            Series s = CTorta.Series.Add(series[j].ToString());
+                            //s.Label = puntos[j].ToString();
+                            //s.Points.AddXY(puntos[j], puntos[j]); Agrega eje horizontal y vertical
+                            s.Points.Add(puntos[j]); //Agrega solo eje vertical
                         }
                     }
                     else
@@ -268,6 +319,11 @@ namespace Practico4
 
                     if (desde <= hasta)
                     {
+                        CTorta.Series.Clear();
+                        CTorta.Titles.Clear();
+                        CTorta.Titles.Add("Numeros Primos");
+                        List<int> series = new List<int>(); // cantidad de elementos
+                        List<int> puntos = new List<int>(); // cantidad de puntos por cada elemento
                         while (desde <= hasta)
                         {
 
@@ -291,9 +347,18 @@ namespace Practico4
                             if (desde / 1 == desde && desde / desde == 1 && primo == true)
                             {
                                 LBLista.Items.Add(desde);
+                                series.Add(desde);
+                                puntos.Add(desde);
                             }
 
                             desde++;
+                        }
+                        for (int j = 0; j < series.Count; j++)
+                        {
+                            Series s = CTorta.Series.Add(series[j].ToString());
+                            //s.Label = puntos[j].ToString();
+                            //s.Points.AddXY(puntos[j], puntos[j]); Agrega eje horizontal y vertical
+                            s.Points.Add(puntos[j]); //Agrega solo eje vertical
                         }
                     }
                     else
