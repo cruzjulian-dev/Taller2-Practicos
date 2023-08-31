@@ -99,10 +99,16 @@ namespace Practico5
 
                 if (int.Parse(TSaldo.Text) < 50)
                 {
-
+                    
+                    DGTabla.Rows.Add(TApellido.Text, TNombre.Text, DTFecha.Text, sexo, "Eliminar", TSaldo.Text, PBFoto.Image, TRuta.Text);
+                    //falta agregar backcolor rojo
+                }
+                else
+                {
                     DGTabla.Rows.Add(TApellido.Text, TNombre.Text, DTFecha.Text, sexo, "Eliminar", TSaldo.Text, PBFoto.Image, TRuta.Text);
                 }
-                
+
+
             }
             string workingDirectory = Environment.CurrentDirectory;
             string projectDirectory = Directory.GetParent(workingDirectory).Parent.FullName; //obtengo la ruta de la raiz del proyecyo
