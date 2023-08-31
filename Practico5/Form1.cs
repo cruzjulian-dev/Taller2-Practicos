@@ -54,22 +54,21 @@ namespace Practico5
 
                 if (file.ShowDialog() == DialogResult.OK)
                 {
-                    PBFoto.Image = Image.FromFile(file.FileName);
+                    string nombreArchivo = Path.GetFileName(file.FileName);
+                    PBFoto.Image = Image.FromFile(file.FileName);                    
                     TRuta.Text = file.FileName;
 
                     String carpetaFotos = Application.StartupPath + @"\Fotos\";
 
-                    String rutas = @"E:\asdasdsdsdsd";
-
                     try
                     {
-                        if (!Directory.Exists(rutas))
+                        if (!Directory.Exists(carpetaFotos))
                         {
-                            Directory.CreateDirectory(rutas);
+                            Directory.CreateDirectory(carpetaFotos);
                         }
 
 
-                        PBFoto.Image.Save(rutas);
+                        PBFoto.Image.Save(carpetaFotos +  nombreArchivo);
 
                     } catch (Exception ex)
                     {
