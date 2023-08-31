@@ -17,6 +17,7 @@ namespace Practico5
         public Form1()
         {
             InitializeComponent();
+            DGTabla.Rows.Clear();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -76,6 +77,78 @@ namespace Practico5
                     }
                 }
 
+            }
+        }
+
+        private void BAgregar_Click(object sender, EventArgs e)
+        {
+            if (TNombre.Text.Trim() == "" || TApellido.Text.Trim() == "" || TSaldo.Text.Trim() == "" || TRuta.Text.Trim() == "" || (RBHombre.Checked == false && RBMujer.Checked == false))
+            {
+                MessageBox.Show("Debe completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } else
+            {
+                String sexo;
+                if (RBHombre.Checked)
+                {
+                    sexo = "Hombre";
+                }
+                else
+                {
+                    sexo = "Mujer";
+                }
+
+                DGTabla.Rows.Add(TApellido.Text, TNombre.Text, DTFecha.Text, sexo, "Eliminar", TSaldo.Text, PBFoto.Image, TRuta.Text);
+            }
+            
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void DGTabla_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (DGTabla.Columns[e.ColumnIndex].Name == "Eliminar")
+            {
+                int filaSeleccionada = DGTabla.CurrentRow.Index;
+                DGTabla.Rows.RemoveAt(filaSeleccionada);
+            }
+        }
+
+        private void TNombre_TextChanged(object sender, EventArgs e)
+        {
+            TNombre.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(TNombre.Text);
+            TNombre.SelectionStart = TNombre.Text.Length;
+        }
+
+        private void TApellido_TextChanged(object sender, EventArgs e)
+        {
+            TApellido.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(TApellido.Text);
+            TApellido.SelectionStart = TApellido.Text.Length;
+        }
+
+        private void TNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TSaldo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
             }
         }
     }
