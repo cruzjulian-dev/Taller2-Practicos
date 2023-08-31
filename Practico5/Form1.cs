@@ -59,7 +59,7 @@ namespace Practico5
                     PBFoto.Image = Image.FromFile(file.FileName);                    
                     TRuta.Text = file.FileName;
 
-                    String carpetaFotos = Application.StartupPath + @"\Fotos\";
+                    String carpetaFotos = Application.StartupPath + @"\Fotos\"; //raiz del proyecto /bin/Debug
 
                     try
                     {
@@ -97,9 +97,16 @@ namespace Practico5
                     sexo = "Mujer";
                 }
 
-                DGTabla.Rows.Add(TApellido.Text, TNombre.Text, DTFecha.Text, sexo, "Eliminar", TSaldo.Text, PBFoto.Image, TRuta.Text);
+                if (int.Parse(TSaldo.Text) < 50)
+                {
+
+                    DGTabla.Rows.Add(TApellido.Text, TNombre.Text, DTFecha.Text, sexo, "Eliminar", TSaldo.Text, PBFoto.Image, TRuta.Text);
+                }
+                
             }
-            
+            string workingDirectory = Environment.CurrentDirectory;
+            string projectDirectory = Directory.GetParent(workingDirectory).Parent.FullName; //obtengo la ruta de la raiz del proyecyo
+            PBFoto.ImageLocation = projectDirectory + @"\img\avatar.jpg";
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -111,8 +118,12 @@ namespace Practico5
         {
             if (DGTabla.Columns[e.ColumnIndex].Name == "Eliminar")
             {
-                int filaSeleccionada = DGTabla.CurrentRow.Index;
-                DGTabla.Rows.RemoveAt(filaSeleccionada);
+                if (MessageBox.Show("Seguro que quieres eliminar este registro?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    int filaSeleccionada = DGTabla.CurrentRow.Index;
+                    DGTabla.Rows.RemoveAt(filaSeleccionada);
+                }
+                
             }
         }
 

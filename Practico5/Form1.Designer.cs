@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DGTabla = new System.Windows.Forms.DataGridView();
             this.PBFoto = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -125,11 +127,11 @@
             // 
             this.RBMujer.AutoSize = true;
             this.RBMujer.BackColor = System.Drawing.Color.Transparent;
-            this.RBMujer.Font = new System.Drawing.Font("Gabriola", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RBMujer.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RBMujer.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.RBMujer.Location = new System.Drawing.Point(141, 6);
             this.RBMujer.Name = "RBMujer";
-            this.RBMujer.Size = new System.Drawing.Size(47, 24);
+            this.RBMujer.Size = new System.Drawing.Size(76, 32);
             this.RBMujer.TabIndex = 12;
             this.RBMujer.TabStop = true;
             this.RBMujer.Text = "Mujer";
@@ -139,11 +141,11 @@
             // 
             this.RBHombre.AutoSize = true;
             this.RBHombre.BackColor = System.Drawing.Color.Transparent;
-            this.RBHombre.Font = new System.Drawing.Font("Gabriola", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RBHombre.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RBHombre.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.RBHombre.Location = new System.Drawing.Point(23, 9);
             this.RBHombre.Name = "RBHombre";
-            this.RBHombre.Size = new System.Drawing.Size(54, 24);
+            this.RBHombre.Size = new System.Drawing.Size(93, 32);
             this.RBHombre.TabIndex = 11;
             this.RBHombre.TabStop = true;
             this.RBHombre.Text = "Hombre";
@@ -199,11 +201,11 @@
             // 
             this.LSaldo.AutoSize = true;
             this.LSaldo.BackColor = System.Drawing.Color.Transparent;
-            this.LSaldo.Font = new System.Drawing.Font("Gabriola", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LSaldo.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LSaldo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.LSaldo.Location = new System.Drawing.Point(44, 206);
             this.LSaldo.Name = "LSaldo";
-            this.LSaldo.Size = new System.Drawing.Size(30, 20);
+            this.LSaldo.Size = new System.Drawing.Size(61, 28);
             this.LSaldo.TabIndex = 5;
             this.LSaldo.Text = "Saldo:";
             this.LSaldo.Click += new System.EventHandler(this.label2_Click);
@@ -212,11 +214,11 @@
             // 
             this.LSexo.AutoSize = true;
             this.LSexo.BackColor = System.Drawing.Color.Transparent;
-            this.LSexo.Font = new System.Drawing.Font("Gabriola", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LSexo.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LSexo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.LSexo.Location = new System.Drawing.Point(44, 164);
             this.LSexo.Name = "LSexo";
-            this.LSexo.Size = new System.Drawing.Size(26, 20);
+            this.LSexo.Size = new System.Drawing.Size(53, 28);
             this.LSexo.TabIndex = 4;
             this.LSexo.Text = "Sexo:";
             // 
@@ -224,11 +226,11 @@
             // 
             this.LApellido.AutoSize = true;
             this.LApellido.BackColor = System.Drawing.Color.Transparent;
-            this.LApellido.Font = new System.Drawing.Font("Gabriola", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LApellido.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LApellido.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.LApellido.Location = new System.Drawing.Point(44, 78);
             this.LApellido.Name = "LApellido";
-            this.LApellido.Size = new System.Drawing.Size(39, 20);
+            this.LApellido.Size = new System.Drawing.Size(82, 28);
             this.LApellido.TabIndex = 3;
             this.LApellido.Text = "Apellido:";
             // 
@@ -236,11 +238,11 @@
             // 
             this.LFecha.AutoSize = true;
             this.LFecha.BackColor = System.Drawing.Color.Transparent;
-            this.LFecha.Font = new System.Drawing.Font("Gabriola", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LFecha.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LFecha.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.LFecha.Location = new System.Drawing.Point(44, 121);
             this.LFecha.Name = "LFecha";
-            this.LFecha.Size = new System.Drawing.Size(81, 20);
+            this.LFecha.Size = new System.Drawing.Size(184, 28);
             this.LFecha.TabIndex = 2;
             this.LFecha.Text = "Fecha de Nacimiento:";
             // 
@@ -248,11 +250,11 @@
             // 
             this.LNombre.AutoSize = true;
             this.LNombre.BackColor = System.Drawing.Color.Transparent;
-            this.LNombre.Font = new System.Drawing.Font("Gabriola", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LNombre.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LNombre.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.LNombre.Location = new System.Drawing.Point(44, 35);
             this.LNombre.Name = "LNombre";
-            this.LNombre.Size = new System.Drawing.Size(38, 20);
+            this.LNombre.Size = new System.Drawing.Size(80, 28);
             this.LNombre.TabIndex = 1;
             this.LNombre.Text = "Nombre:";
             // 
@@ -287,11 +289,15 @@
             // 
             // Apellido
             // 
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Apellido.DefaultCellStyle = dataGridViewCellStyle1;
             this.Apellido.HeaderText = "Apellido";
             this.Apellido.Name = "Apellido";
             // 
             // Nombre
             // 
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nombre.DefaultCellStyle = dataGridViewCellStyle2;
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
             // 
@@ -319,8 +325,8 @@
             // 
             // Foto
             // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Foto.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Foto.DefaultCellStyle = dataGridViewCellStyle3;
             this.Foto.HeaderText = "Foto";
             this.Foto.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
             this.Foto.Name = "Foto";
@@ -343,6 +349,7 @@
             this.Controls.Add(this.DGTabla);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulario con DataGrid";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGTabla)).EndInit();
