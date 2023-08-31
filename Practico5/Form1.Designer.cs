@@ -30,6 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha_Nacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Saldo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Foto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ruta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PBFoto = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.TRuta = new System.Windows.Forms.TextBox();
@@ -46,14 +54,6 @@
             this.LFecha = new System.Windows.Forms.Label();
             this.LNombre = new System.Windows.Forms.Label();
             this.BAgregar = new System.Windows.Forms.Button();
-            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha_Nacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Eliminar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Saldo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Foto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ruta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PBFoto)).BeginInit();
@@ -76,6 +76,46 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(868, 170);
             this.dataGridView1.TabIndex = 1;
+            // 
+            // Apellido
+            // 
+            this.Apellido.HeaderText = "Apellido";
+            this.Apellido.Name = "Apellido";
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            // 
+            // Fecha_Nacimiento
+            // 
+            this.Fecha_Nacimiento.HeaderText = "Fecha Nacimiento";
+            this.Fecha_Nacimiento.Name = "Fecha_Nacimiento";
+            // 
+            // Sexo
+            // 
+            this.Sexo.HeaderText = "Sexo";
+            this.Sexo.Name = "Sexo";
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Name = "Eliminar";
+            // 
+            // Saldo
+            // 
+            this.Saldo.HeaderText = "Saldo";
+            this.Saldo.Name = "Saldo";
+            // 
+            // Foto
+            // 
+            this.Foto.HeaderText = "Foto";
+            this.Foto.Name = "Foto";
+            // 
+            // Ruta
+            // 
+            this.Ruta.HeaderText = "Ruta";
+            this.Ruta.Name = "Ruta";
             // 
             // PBFoto
             // 
@@ -122,11 +162,11 @@
             // 
             this.RBMujer.AutoSize = true;
             this.RBMujer.BackColor = System.Drawing.SystemColors.MenuText;
-            this.RBMujer.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RBMujer.Font = new System.Drawing.Font("Gabriola", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RBMujer.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.RBMujer.Location = new System.Drawing.Point(260, 164);
             this.RBMujer.Name = "RBMujer";
-            this.RBMujer.Size = new System.Drawing.Size(70, 29);
+            this.RBMujer.Size = new System.Drawing.Size(47, 24);
             this.RBMujer.TabIndex = 12;
             this.RBMujer.TabStop = true;
             this.RBMujer.Text = "Mujer";
@@ -136,11 +176,11 @@
             // 
             this.RBHombre.AutoSize = true;
             this.RBHombre.BackColor = System.Drawing.SystemColors.MenuText;
-            this.RBHombre.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RBHombre.Font = new System.Drawing.Font("Gabriola", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RBHombre.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.RBHombre.Location = new System.Drawing.Point(142, 167);
             this.RBHombre.Name = "RBHombre";
-            this.RBHombre.Size = new System.Drawing.Size(89, 29);
+            this.RBHombre.Size = new System.Drawing.Size(54, 24);
             this.RBHombre.TabIndex = 11;
             this.RBHombre.TabStop = true;
             this.RBHombre.Text = "Hombre";
@@ -191,11 +231,11 @@
             // 
             this.LSaldo.AutoSize = true;
             this.LSaldo.BackColor = System.Drawing.SystemColors.MenuText;
-            this.LSaldo.Font = new System.Drawing.Font("Papyrus", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LSaldo.Font = new System.Drawing.Font("Gabriola", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LSaldo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.LSaldo.Location = new System.Drawing.Point(44, 206);
             this.LSaldo.Name = "LSaldo";
-            this.LSaldo.Size = new System.Drawing.Size(78, 33);
+            this.LSaldo.Size = new System.Drawing.Size(30, 20);
             this.LSaldo.TabIndex = 5;
             this.LSaldo.Text = "Saldo:";
             this.LSaldo.Click += new System.EventHandler(this.label2_Click);
@@ -204,11 +244,11 @@
             // 
             this.LSexo.AutoSize = true;
             this.LSexo.BackColor = System.Drawing.SystemColors.MenuText;
-            this.LSexo.Font = new System.Drawing.Font("Papyrus", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LSexo.Font = new System.Drawing.Font("Gabriola", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LSexo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.LSexo.Location = new System.Drawing.Point(44, 164);
             this.LSexo.Name = "LSexo";
-            this.LSexo.Size = new System.Drawing.Size(70, 33);
+            this.LSexo.Size = new System.Drawing.Size(26, 20);
             this.LSexo.TabIndex = 4;
             this.LSexo.Text = "Sexo:";
             // 
@@ -216,11 +256,11 @@
             // 
             this.LApellido.AutoSize = true;
             this.LApellido.BackColor = System.Drawing.SystemColors.MenuText;
-            this.LApellido.Font = new System.Drawing.Font("Papyrus", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LApellido.Font = new System.Drawing.Font("Gabriola", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LApellido.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.LApellido.Location = new System.Drawing.Point(44, 78);
             this.LApellido.Name = "LApellido";
-            this.LApellido.Size = new System.Drawing.Size(98, 33);
+            this.LApellido.Size = new System.Drawing.Size(39, 20);
             this.LApellido.TabIndex = 3;
             this.LApellido.Text = "Apellido:";
             // 
@@ -228,11 +268,11 @@
             // 
             this.LFecha.AutoSize = true;
             this.LFecha.BackColor = System.Drawing.SystemColors.MenuText;
-            this.LFecha.Font = new System.Drawing.Font("Papyrus", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LFecha.Font = new System.Drawing.Font("Gabriola", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LFecha.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.LFecha.Location = new System.Drawing.Point(44, 121);
             this.LFecha.Name = "LFecha";
-            this.LFecha.Size = new System.Drawing.Size(210, 33);
+            this.LFecha.Size = new System.Drawing.Size(81, 20);
             this.LFecha.TabIndex = 2;
             this.LFecha.Text = "Fecha de Nacimiento:";
             // 
@@ -240,11 +280,11 @@
             // 
             this.LNombre.AutoSize = true;
             this.LNombre.BackColor = System.Drawing.SystemColors.MenuText;
-            this.LNombre.Font = new System.Drawing.Font("Papyrus", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LNombre.Font = new System.Drawing.Font("Gabriola", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LNombre.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.LNombre.Location = new System.Drawing.Point(44, 35);
             this.LNombre.Name = "LNombre";
-            this.LNombre.Size = new System.Drawing.Size(92, 33);
+            this.LNombre.Size = new System.Drawing.Size(38, 20);
             this.LNombre.TabIndex = 1;
             this.LNombre.Text = "Nombre:";
             // 
@@ -260,46 +300,6 @@
             this.BAgregar.Text = "Agregar";
             this.BAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BAgregar.UseVisualStyleBackColor = true;
-            // 
-            // Apellido
-            // 
-            this.Apellido.HeaderText = "Apellido";
-            this.Apellido.Name = "Apellido";
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            // 
-            // Fecha_Nacimiento
-            // 
-            this.Fecha_Nacimiento.HeaderText = "Fecha Nacimiento";
-            this.Fecha_Nacimiento.Name = "Fecha_Nacimiento";
-            // 
-            // Sexo
-            // 
-            this.Sexo.HeaderText = "Sexo";
-            this.Sexo.Name = "Sexo";
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Name = "Eliminar";
-            // 
-            // Saldo
-            // 
-            this.Saldo.HeaderText = "Saldo";
-            this.Saldo.Name = "Saldo";
-            // 
-            // Foto
-            // 
-            this.Foto.HeaderText = "Foto";
-            this.Foto.Name = "Foto";
-            // 
-            // Ruta
-            // 
-            this.Ruta.HeaderText = "Ruta";
-            this.Ruta.Name = "Ruta";
             // 
             // openFileDialog1
             // 

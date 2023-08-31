@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.Remoting.Channels;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -48,15 +49,34 @@ namespace Practico5
             using (OpenFileDialog file = new OpenFileDialog())
             {
                 file.Title = "Abrir imagen";
-                file.Filter = "Archivos Imagenes|*.jpg|Archivos Imagenes|*.bmp|Archivos Imagenes | *.png";
+                file.Filter = "Archivos Imagenes|*.jpg|Archivos Imagenes|*.jpeg|Archivos Imagenes|*.bmp|Archivos Imagenes | *.png";
                 
 
                 if (file.ShowDialog() == DialogResult.OK)
                 {
-                    String rutaArchivo = file.FileName;
-                    PBFoto.ImageLocation = rutaArchivo;
-                    TRuta.Text = rutaArchivo;
+                    PBFoto.Image = Image.FromFile(file.FileName);
+                    TRuta.Text = file.FileName;
+
+                    String carpetaFotos = Application.StartupPath + @"\Fotos\";
+
+                    String rutas = @"E:\asdasdsdsdsd";
+
+                    try
+                    {
+                        if (!Directory.Exists(rutas))
+                        {
+                            Directory.CreateDirectory(rutas);
+                        }
+
+
+                        PBFoto.Image.Save(rutas);
+
+                    } catch (Exception ex)
+                    {
+                        MessageBox.Show("" + ex);
+                    }
                 }
+
             }
         }
     }

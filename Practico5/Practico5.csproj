@@ -62,6 +62,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="bin\Debug\Practico5.exe.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -88,6 +89,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\fondo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Practico5.exe" />
+    <Content Include="bin\Debug\Practico5.pdb" />
+    <Content Include="img\avatar.jpg" />
+    <Content Include="img\fondo_negro.jpg" />
+    <Content Include="img\hombre.jpg" />
+    <Content Include="img\mujer.jpg" />
+    <Content Include="img\panel.jpg" />
+    <Content Include="img\save.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
