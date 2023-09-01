@@ -294,6 +294,7 @@
             this.Apellido.DefaultCellStyle = dataGridViewCellStyle1;
             this.Apellido.HeaderText = "Apellido";
             this.Apellido.Name = "Apellido";
+            this.Apellido.Width = 150;
             // 
             // Nombre
             // 
@@ -301,6 +302,7 @@
             this.Nombre.DefaultCellStyle = dataGridViewCellStyle2;
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
+            this.Nombre.Width = 150;
             // 
             // Fecha_Nacimiento
             // 
