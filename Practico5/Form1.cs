@@ -87,32 +87,43 @@ namespace Practico5
                 MessageBox.Show("Debe completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             } else
             {
-                String sexo;
-                if (RBHombre.Checked)
+                if (MessageBox.Show("Deseas agregar este cliente?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                 {
-                    sexo = "Hombre";
-                }
-                else
-                {
-                    sexo = "Mujer";
-                }
 
-                if (int.Parse(TSaldo.Text) < 50)
+                    TNombre.Clear();
+                    TApellido.Clear();
+                    TSaldo.Clear();
+                    TRuta.Clear();
+                    string workingDirectory = Environment.CurrentDirectory;
+                    string projectDirectory = Directory.GetParent(workingDirectory).Parent.FullName; //obtengo la ruta de la raiz del proyecyo
+                    PBFoto.ImageLocation = projectDirectory + @"\img\avatar.jpg";
+                } else
                 {
-                    
+                    String sexo;
+                    if (RBHombre.Checked)
+                    {
+                        sexo = "Hombre";
+                    }
+                    else
+                    {
+                        sexo = "Mujer";
+                    }
+
                     DGTabla.Rows.Add(TApellido.Text, TNombre.Text, DTFecha.Text, sexo, "Eliminar", TSaldo.Text, PBFoto.Image, TRuta.Text);
-                    //falta agregar backcolor rojo
+
+                    TNombre.Clear();
+                    TApellido.Clear();
+                    TSaldo.Clear();
+                    TRuta.Clear();
+                    string workingDirectory = Environment.CurrentDirectory;
+                    string projectDirectory = Directory.GetParent(workingDirectory).Parent.FullName; //obtengo la ruta de la raiz del proyecyo
+                    PBFoto.ImageLocation = projectDirectory + @"\img\avatar.jpg";
                 }
-                else
-                {
-                    DGTabla.Rows.Add(TApellido.Text, TNombre.Text, DTFecha.Text, sexo, "Eliminar", TSaldo.Text, PBFoto.Image, TRuta.Text);
-                }
+                
 
 
             }
-            string workingDirectory = Environment.CurrentDirectory;
-            string projectDirectory = Directory.GetParent(workingDirectory).Parent.FullName; //obtengo la ruta de la raiz del proyecyo
-            PBFoto.ImageLocation = projectDirectory + @"\img\avatar.jpg";
+            
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -166,6 +177,26 @@ namespace Practico5
             if (!char.IsNumber(e.KeyChar) && (e.KeyChar != (char)Keys.Back))
             {
                 e.Handled = true;
+            }
+        }
+
+        private void DGTabla_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
+        {
+            // Cambiar el color de fondo de la fila en función de alguna condición
+            if (e.RowIndex >= 0)
+            {
+                int saldo = Convert.ToInt32(DGTabla.Rows[e.RowIndex].Cells["Saldo"].Value);
+                DGTabla.DefaultCellStyle.BackColor = Color.White;
+                if (saldo < 50)
+                {
+                    // Cambiar el color de fondo de la fila
+                    DGTabla.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Red;
+                }
+                else
+                {
+                    // Restaurar el color de fondo predeterminado
+                    DGTabla.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.White;
+                }
             }
         }
     }

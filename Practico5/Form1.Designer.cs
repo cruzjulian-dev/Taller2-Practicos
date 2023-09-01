@@ -35,9 +35,10 @@
             this.DGTabla = new System.Windows.Forms.DataGridView();
             this.PBFoto = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.TRuta = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.RBMujer = new System.Windows.Forms.RadioButton();
             this.RBHombre = new System.Windows.Forms.RadioButton();
+            this.TRuta = new System.Windows.Forms.TextBox();
             this.DTFecha = new System.Windows.Forms.DateTimePicker();
             this.TSaldo = new System.Windows.Forms.TextBox();
             this.TApellido = new System.Windows.Forms.TextBox();
@@ -50,7 +51,6 @@
             this.LNombre = new System.Windows.Forms.Label();
             this.BAgregar = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha_Nacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -82,6 +82,7 @@
             this.DGTabla.Size = new System.Drawing.Size(868, 170);
             this.DGTabla.TabIndex = 1;
             this.DGTabla.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGTabla_CellContentClick);
+            this.DGTabla.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.DGTabla_RowPrePaint);
             // 
             // PBFoto
             // 
@@ -116,22 +117,26 @@
             this.panel1.Size = new System.Drawing.Size(428, 361);
             this.panel1.TabIndex = 0;
             // 
-            // TRuta
+            // panel2
             // 
-            this.TRuta.Location = new System.Drawing.Point(147, 251);
-            this.TRuta.Name = "TRuta";
-            this.TRuta.Size = new System.Drawing.Size(226, 20);
-            this.TRuta.TabIndex = 13;
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.RBMujer);
+            this.panel2.Controls.Add(this.RBHombre);
+            this.panel2.Location = new System.Drawing.Point(119, 158);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(222, 48);
+            this.panel2.TabIndex = 14;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // RBMujer
             // 
             this.RBMujer.AutoSize = true;
             this.RBMujer.BackColor = System.Drawing.Color.Transparent;
-            this.RBMujer.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RBMujer.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RBMujer.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.RBMujer.Location = new System.Drawing.Point(141, 6);
             this.RBMujer.Name = "RBMujer";
-            this.RBMujer.Size = new System.Drawing.Size(76, 32);
+            this.RBMujer.Size = new System.Drawing.Size(70, 29);
             this.RBMujer.TabIndex = 12;
             this.RBMujer.TabStop = true;
             this.RBMujer.Text = "Mujer";
@@ -141,16 +146,23 @@
             // 
             this.RBHombre.AutoSize = true;
             this.RBHombre.BackColor = System.Drawing.Color.Transparent;
-            this.RBHombre.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RBHombre.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RBHombre.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.RBHombre.Location = new System.Drawing.Point(23, 9);
             this.RBHombre.Name = "RBHombre";
-            this.RBHombre.Size = new System.Drawing.Size(93, 32);
+            this.RBHombre.Size = new System.Drawing.Size(89, 29);
             this.RBHombre.TabIndex = 11;
             this.RBHombre.TabStop = true;
             this.RBHombre.Text = "Hombre";
             this.RBHombre.UseVisualStyleBackColor = false;
             this.RBHombre.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // TRuta
+            // 
+            this.TRuta.Location = new System.Drawing.Point(147, 251);
+            this.TRuta.Name = "TRuta";
+            this.TRuta.Size = new System.Drawing.Size(226, 20);
+            this.TRuta.TabIndex = 13;
             // 
             // DTFecha
             // 
@@ -201,11 +213,11 @@
             // 
             this.LSaldo.AutoSize = true;
             this.LSaldo.BackColor = System.Drawing.Color.Transparent;
-            this.LSaldo.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LSaldo.Font = new System.Drawing.Font("Papyrus", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LSaldo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.LSaldo.Location = new System.Drawing.Point(44, 206);
             this.LSaldo.Name = "LSaldo";
-            this.LSaldo.Size = new System.Drawing.Size(61, 28);
+            this.LSaldo.Size = new System.Drawing.Size(78, 33);
             this.LSaldo.TabIndex = 5;
             this.LSaldo.Text = "Saldo:";
             this.LSaldo.Click += new System.EventHandler(this.label2_Click);
@@ -214,11 +226,11 @@
             // 
             this.LSexo.AutoSize = true;
             this.LSexo.BackColor = System.Drawing.Color.Transparent;
-            this.LSexo.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LSexo.Font = new System.Drawing.Font("Papyrus", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LSexo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.LSexo.Location = new System.Drawing.Point(44, 164);
             this.LSexo.Name = "LSexo";
-            this.LSexo.Size = new System.Drawing.Size(53, 28);
+            this.LSexo.Size = new System.Drawing.Size(70, 33);
             this.LSexo.TabIndex = 4;
             this.LSexo.Text = "Sexo:";
             // 
@@ -226,11 +238,11 @@
             // 
             this.LApellido.AutoSize = true;
             this.LApellido.BackColor = System.Drawing.Color.Transparent;
-            this.LApellido.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LApellido.Font = new System.Drawing.Font("Papyrus", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LApellido.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.LApellido.Location = new System.Drawing.Point(44, 78);
             this.LApellido.Name = "LApellido";
-            this.LApellido.Size = new System.Drawing.Size(82, 28);
+            this.LApellido.Size = new System.Drawing.Size(98, 33);
             this.LApellido.TabIndex = 3;
             this.LApellido.Text = "Apellido:";
             // 
@@ -238,11 +250,11 @@
             // 
             this.LFecha.AutoSize = true;
             this.LFecha.BackColor = System.Drawing.Color.Transparent;
-            this.LFecha.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LFecha.Font = new System.Drawing.Font("Papyrus", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LFecha.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.LFecha.Location = new System.Drawing.Point(44, 121);
             this.LFecha.Name = "LFecha";
-            this.LFecha.Size = new System.Drawing.Size(184, 28);
+            this.LFecha.Size = new System.Drawing.Size(210, 33);
             this.LFecha.TabIndex = 2;
             this.LFecha.Text = "Fecha de Nacimiento:";
             // 
@@ -250,11 +262,11 @@
             // 
             this.LNombre.AutoSize = true;
             this.LNombre.BackColor = System.Drawing.Color.Transparent;
-            this.LNombre.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LNombre.Font = new System.Drawing.Font("Papyrus", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LNombre.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.LNombre.Location = new System.Drawing.Point(44, 35);
             this.LNombre.Name = "LNombre";
-            this.LNombre.Size = new System.Drawing.Size(80, 28);
+            this.LNombre.Size = new System.Drawing.Size(92, 33);
             this.LNombre.TabIndex = 1;
             this.LNombre.Text = "Nombre:";
             // 
@@ -276,27 +288,16 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.RBMujer);
-            this.panel2.Controls.Add(this.RBHombre);
-            this.panel2.Location = new System.Drawing.Point(119, 158);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(222, 48);
-            this.panel2.TabIndex = 14;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
             // Apellido
             // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Papyrus", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Apellido.DefaultCellStyle = dataGridViewCellStyle1;
             this.Apellido.HeaderText = "Apellido";
             this.Apellido.Name = "Apellido";
             // 
             // Nombre
             // 
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Papyrus", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nombre.DefaultCellStyle = dataGridViewCellStyle2;
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
