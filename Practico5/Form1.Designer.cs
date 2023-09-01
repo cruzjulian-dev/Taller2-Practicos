@@ -79,6 +79,7 @@
             this.Ruta});
             this.DGTabla.Location = new System.Drawing.Point(12, 400);
             this.DGTabla.Name = "DGTabla";
+            this.DGTabla.RowTemplate.Height = 45;
             this.DGTabla.Size = new System.Drawing.Size(868, 170);
             this.DGTabla.TabIndex = 1;
             this.DGTabla.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGTabla_CellContentClick);
@@ -292,6 +293,7 @@
             // 
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Papyrus", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Apellido.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Apellido.FillWeight = 150F;
             this.Apellido.HeaderText = "Apellido";
             this.Apellido.Name = "Apellido";
             this.Apellido.Width = 150;
